@@ -5,23 +5,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Buy Video Games & Accessories Online | GameStore</title>
         <link rel="stylesheet" href="style.css" />
-        <link rel="icon" href="favicon.ico" sizes="any" />
+        <link rel="icon" href="src/favicon/favicon.ico" sizes="any" />
         <link
             rel="icon"
             type="image/png"
             sizes="32x32"
-            href="/src/favicon/favicon-32x32.png"
+            href="src/favicon/favicon-32x32.png"
         />
         <link
             rel="icon"
             type="image/png"
             sizes="16x16"
-            href="/src/favicon/favicon-16x16.png"
+            href="src/favicon/favicon-16x16.png"
         />
         <link
             rel="apple-touch-icon"
             sizes="180x180"
-            href="/src/favicon/apple-touch-icon.png"
+            href="src/favicon/apple-touch-icon.png"
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -478,9 +478,12 @@
                 </div>
             </section>
             <section class="subscribe">
-                <div>
-                    <h2>Subscribe to the Games Store Email List</h2>
-                    <p>
+                <div class="subscribe__inner">
+                    <h2 class="subscribe__title">
+                        <span class="subscribe__title-span">Subscribe</span> to
+                        the Games Store Email List
+                    </h2>
+                    <p class="subscribe__subtitle">
                         Sign up for our email newsletter to get info on game
                         announcements and updates, details on special events and
                         offers, and more from Games Store and our affiliates.
@@ -488,20 +491,31 @@
                 </div>
                 <form class="subscribe__form" action="#" method="post">
                     <label>
+                        <span class="visually-hidden">Your Name</span>
                         <input
+                            class="subscribe__input"
                             type="text"
                             name="user-name"
                             placeholder="Your Name"
+                            autocomplete="name"
+                            required
+                            maxlength="50"
                         />
                     </label>
                     <label>
+                        <span class="visually-hidden">Your Email</span>
                         <input
+                            class="subscribe__input"
                             type="email"
                             name="user-email"
                             placeholder="Your Email"
+                            autocomplete="email"
+                            required
                         />
                     </label>
-                    <a class="btn--gradient" href="#">Subscribe</a>
+                    <button class="btn--gradient" type="submit">
+                        Subscribe
+                    </button>
                 </form>
             </section>
         </main>

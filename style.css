@@ -203,6 +203,8 @@ main {
     text-transform: uppercase;
     text-decoration: none;
     align-self: flex-start;
+    font-family: Urbanist, sans-serif;
+    font-weight: 700;
 }
 
 .btn--gradient:hover {
@@ -271,6 +273,9 @@ main {
         linear-gradient(to top, rgba(236, 236, 236, 0) 0%, #ececec 100%),
         linear-gradient(to bottom, rgba(236, 236, 236, 0) 0%, #ececec 100%),
         url("src/img/backgound_latest.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .latest-news__inner {
@@ -330,12 +335,9 @@ main {
     position: absolute;
     top: 0;
     left: 0;
-
     width: 100%;
     height: 10px;
-
     background: var(--gradients-main-gradient);
-
     border-radius: 8px 8px 0 0;
 }
 
@@ -425,7 +427,73 @@ main {
     background-image:
         linear-gradient(to left, rgba(236, 236, 236, 0) 0%, #ececec 80%),
         url("src/img/bg-subscribe.png");
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     gap: 32px;
+}
+
+.subscribe__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 800px;
+}
+
+.subscribe__title {
+    font-family: Urbanist, sans-serif;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+.subscribe__title-span {
+    color: #40ace1;
+}
+
+.subscribe__subtitle {
+    font-family: Urbanist, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    color: var(--text-secondary, rgba(14, 13, 15, 0.7));
+}
+
+.subscribe__form {
+    display: flex;
+    gap: 24px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.subscribe__input {
+    padding: 20px 32px;
+    border: 1px solid rgba(14, 13, 15, 0.24);
+    border-radius: 5px;
+    background-color: transparent;
+    font-weight: 700;
+}
+
+.subscribe__input:focus {
+    outline: none;
+    border: 1px solid var(--blue-main);
+    box-shadow: 0 0 5px var(--blue-main);
+    opacity: 0.5;
+}
+
+.subscribe__form button {
+    border: none;
+    cursor: pointer;
 }
